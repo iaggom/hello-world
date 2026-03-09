@@ -1,0 +1,41 @@
+publico,modalidade,indicador,codigo_sgs,unidade
+PJ,Capital de giro até 365 dias,saldo,,R$ milhões
+PJ,Capital de giro até 365 dias,concessao,,R$ milhões
+PJ,Capital de giro até 365 dias,inadimplencia,,%
+PJ,Capital de giro até 365 dias,taxa_juros,,% a.a.
+PJ,Capital de giro superior a 365 dias,saldo,,R$ milhões
+PJ,Capital de giro superior a 365 dias,concessao,,R$ milhões
+PJ,Capital de giro superior a 365 dias,inadimplencia,,%
+PJ,Capital de giro superior a 365 dias,taxa_juros,,% a.a.
+PJ,Capital de giro rotativo,saldo,,R$ milhões
+PJ,Capital de giro rotativo,concessao,,R$ milhões
+PJ,Capital de giro rotativo,inadimplencia,,%
+PJ,Capital de giro rotativo,taxa_juros,,% a.a.
+PJ,Desconto de duplicatas e recebíveis,saldo,,R$ milhões
+PJ,Desconto de duplicatas e recebíveis,concessao,,R$ milhões
+PJ,Desconto de duplicatas e recebíveis,inadimplencia,,%
+PJ,Desconto de duplicatas e recebíveis,taxa_juros,,% a.a.
+PJ,Financiamento imobiliário total - taxas de mercado,saldo,,R$ milhões
+PJ,Financiamento imobiliário total - taxas de mercado,concessao,,R$ milhões
+PJ,Financiamento imobiliário total - taxas de mercado,inadimplencia,,%
+PJ,Financiamento imobiliário total - taxas de mercado,taxa_juros,,% a.a.
+PJ,Financiamento imobiliário total - taxas reguladas,saldo,,R$ milhões
+PJ,Financiamento imobiliário total - taxas reguladas,concessao,,R$ milhões
+PJ,Financiamento imobiliário total - taxas reguladas,inadimplencia,,%
+PJ,Financiamento imobiliário total - taxas reguladas,taxa_juros,,% a.a.
+PF,Crédito pessoal não consignado,saldo,,R$ milhões
+PF,Crédito pessoal não consignado,concessao,,R$ milhões
+PF,Crédito pessoal não consignado,inadimplencia,,%
+PF,Crédito pessoal não consignado,taxa_juros,,% a.a.
+PF,Crédito consignado total (público+privado+INSS),saldo,,R$ milhões
+PF,Crédito consignado total (público+privado+INSS),concessao,,R$ milhões
+PF,Crédito consignado total (público+privado+INSS),inadimplencia,,%
+PF,Crédito consignado total (público+privado+INSS),taxa_juros,,% a.a.
+PF,Financiamento imobiliário total - taxas de mercado,saldo,,R$ milhões
+PF,Financiamento imobiliário total - taxas de mercado,concessao,,R$ milhões
+PF,Financiamento imobiliário total - taxas de mercado,inadimplencia,,%
+PF,Financiamento imobiliário total - taxas de mercado,taxa_juros,,% a.a.
+PF,Financiamento imobiliário total - taxas reguladas,saldo,,R$ milhões
+PF,Financiamento imobiliário total - taxas reguladas,concessao,,R$ milhões
+PF,Financiamento imobiliário total - taxas reguladas,inadimplencia,,%
+PF,Financiamento imobiliário total - taxas reguladas,taxa_juros,,% a.a.

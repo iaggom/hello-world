@@ -1,0 +1,37 @@
+name: BCB Credit Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  discover-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pandas matplotlib
+      - name: Suggest SGS codes (review output)
+        run: |
+          python scripts/discover_sgs_codes.py \
+            --catalogo data/catalogo_series_exemplo.csv \
+            --saida data/catalogo_series_sugerido.csv \
+            --top 5
+      - name: Run credit extraction (requires catalog with code_sgs filled)
+        run: |
+          python scripts/bcb_credit_history.py \
+            --catalogo data/catalogo_series_exemplo.csv \
+            --inicio 2015-01-01 \
+            --saida data/saida_credito \
+            --graficos
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: bcb-credit-output
+          path: |
+            data/catalogo_series_sugerido.csv
+            data/saida_credito/

@@ -1,3 +1,49 @@
+## Coleta de histórico de crédito (Banco Central)
+
+Este repositório agora inclui um script Python para coletar séries do SGS/BCB e calcular:
+- valor nominal da série;
+- variação m/m;
+- variação a/a.
+
+Modalidades já listadas no catálogo de exemplo:
+- **PJ**: capital de giro (até 365, acima de 365 e rotativo), desconto de duplicatas e recebíveis, financiamento imobiliário (taxas de mercado e reguladas);
+- **PF**: crédito pessoal não consignado, consignado total, financiamento imobiliário (taxas de mercado e reguladas).
+
+### Arquivos
+- `scripts/bcb_credit_history.py`: coleta séries e gera saídas.
+- `data/catalogo_series_exemplo.csv`: catálogo para preencher com os códigos SGS.
+
+### Como usar
+1. Preencha a coluna `codigo_sgs` no catálogo com os códigos corretos do SGS.
+2. Rode:
+
+```bash
+python scripts/bcb_credit_history.py \
+  --catalogo data/catalogo_series_exemplo.csv \
+  --inicio 2015-01-01 \
+  --saida data/saida_credito \
+  --graficos
+```
+
+Saídas geradas:
+- `historico_credito_long.csv` (histórico completo);
+- `foto_ultima_data.csv` (snapshot da última data);
+- pasta `graficos/` com um PNG por série (banda ±2 desvios padrão em cinza claro, média móvel 12m em vermelho pontilhado e valor mensal em azul);
+- pasta `paineis_16x9/` com páginas PNG em formato 16:9, contendo 4 gráficos por página (2x2), prontas para colar em slide.
+
+> Observação: para `saldo` e `concessao`, as variações são percentuais; para `inadimplencia` e `taxa_juros`, as variações são em pontos percentuais (p.p.).
+
+
+### Descobrir códigos SGS automaticamente (varredura fina)
+Se você não tiver permissão de admin no PC, rode no GitHub (Codespaces/Actions):
+
+```bash
+python scripts/discover_sgs_codes.py   --catalogo data/catalogo_series_exemplo.csv   --saida data/catalogo_series_sugerido.csv   --top 5
+```
+
+O script consulta metadados do SGS (Olinda/BCB), calcula similaridade de nomes e sugere códigos para cada linha do catálogo.
+Depois, revise manualmente e copie os códigos para a coluna `codigo_sgs`.
+
 # Welcome to GitHub
 
 Welcome to GitHub—where millions of developers work together on software. Ready to get started? Let’s learn how this all works by building and publishing your first GitHub Pages website!
